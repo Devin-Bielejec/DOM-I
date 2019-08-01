@@ -78,3 +78,6 @@ mcH4[2].textContent = siteContent["main-content"]["services-content"];
 mcH4[3].textContent = siteContent["main-content"]["product-content"];
 
 mcH4[4].textContent = siteContent["main-content"]["vision-content"];
+
+//main content - img
+document.querySelector(".middle-img").src = siteContent["main-content"]["middle-img-src"];
