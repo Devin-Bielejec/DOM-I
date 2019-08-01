@@ -66,3 +66,15 @@ mcH4[3].textContent = siteContent["main-content"]["product-h4"];
 
 mcH4[4].textContent = siteContent["main-content"]["vision-h4"];
 
+//main content - p
+mcH4 = document.querySelectorAll(".main-content p");
+
+mcH4[0].textContent = siteContent["main-content"]["features-content"];
+
+mcH4[1].textContent = siteContent["main-content"]["about-content"];
+
+mcH4[2].textContent = siteContent["main-content"]["services-content"];
+
+mcH4[3].textContent = siteContent["main-content"]["product-content"];
+
+mcH4[4].textContent = siteContent["main-content"]["vision-content"];
