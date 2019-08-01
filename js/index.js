@@ -38,7 +38,13 @@ const siteContent = {
 };
 
 //nav - loop time
-for (let i = 0; i < Object.keys(siteContent.nav).length; i++){
+for (let i = 0; i < Object.keys(siteContent.nav).length-1; i++){
   let nav = document.querySelector(`nav a:nth-of-type(${i+1})`);
   nav.text = `${siteContent.nav[`nav-item-${i+1}`]}`;
 }
+
+let navImg = document.querySelector("#logo-img").setAttribute("src", siteContent.nav["img-src"]);
+//cta - section
+
+let ctaH1 = document.querySelector('h1');
+ctaH1.innerHTML = siteContent.cta.h1;
