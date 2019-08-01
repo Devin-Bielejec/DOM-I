@@ -43,8 +43,12 @@ for (let i = 0; i < Object.keys(siteContent.nav).length-1; i++){
   nav.text = `${siteContent.nav[`nav-item-${i+1}`]}`;
 }
 
-let navImg = document.querySelector("#logo-img").setAttribute("src", siteContent.nav["img-src"]);
+document.querySelector("#logo-img").src = siteContent.nav["img-src"];
+
 //cta - section
 
 let ctaH1 = document.querySelector('h1');
-ctaH1.innerHTML = siteContent.cta.h1;
+ctaH1.textContent = siteContent.cta.h1;
+
+let ctaButton = document.querySelector(".cta button");
+ctaButton.textContent = siteContent.cta.button;
