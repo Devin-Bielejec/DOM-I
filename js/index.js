@@ -47,8 +47,22 @@ document.querySelector("#logo-img").src = siteContent.nav["img-src"];
 
 //cta - section
 
-let ctaH1 = document.querySelector('h1');
-ctaH1.textContent = siteContent.cta.h1;
+document.querySelector('h1').textContent = siteContent.cta.h1;
 
-let ctaButton = document.querySelector(".cta button");
-ctaButton.textContent = siteContent.cta.button;
+document.querySelector(".cta button").textContent = siteContent.cta.button;
+
+document.querySelector(".cta img").src = siteContent.cta["img-src"];
+
+//main content - h4
+mcH4 = document.querySelectorAll(".main-content h4");
+
+mcH4[0].textContent = siteContent["main-content"]["features-h4"];
+
+mcH4[1].textContent = siteContent["main-content"]["about-h4"];
+
+mcH4[2].textContent = siteContent["main-content"]["services-h4"];
+
+mcH4[3].textContent = siteContent["main-content"]["product-h4"];
+
+mcH4[4].textContent = siteContent["main-content"]["vision-h4"];
+
