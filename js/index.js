@@ -81,3 +81,13 @@ mcH4[4].textContent = siteContent["main-content"]["vision-content"];
 
 //main content - img
 document.querySelector(".middle-img").src = siteContent["main-content"]["middle-img-src"];
+
+//contact
+contacts = Object.keys(siteContent.contact);
+
+let nodeContacts = document.querySelectorAll(".contact *");
+console.log(nodeContacts);
+console.log(nodeContacts[3]);
+for (let i = 0; i < contacts.length; i++){
+  nodeContacts[i].textContent = siteContent.contact[contacts[i]];
+}
