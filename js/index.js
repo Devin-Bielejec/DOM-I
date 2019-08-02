@@ -41,6 +41,7 @@ const siteContent = {
 for (let i = 0; i < Object.keys(siteContent.nav).length-1; i++){
   let nav = document.querySelector(`nav a:nth-of-type(${i+1})`);
   nav.text = `${siteContent.nav[`nav-item-${i+1}`]}`;
+  nav.style.color = "green";
 }
 
 document.querySelector("#logo-img").src = siteContent.nav["img-src"];
