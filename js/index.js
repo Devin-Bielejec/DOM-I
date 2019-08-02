@@ -44,6 +44,16 @@ for (let i = 0; i < Object.keys(siteContent.nav).length-1; i++){
   nav.style.color = "green";
 }
 
+//adding two new nav links
+let newNav = document.createElement("a");
+newNav.textContent = "China";
+
+let newNav2 = document.createElement("a");
+newNav2.textContent = "Portugal";
+
+document.querySelector('nav').appendChild(newNav);
+document.querySelector('nav').prepend(newNav2);
+
 document.querySelector("#logo-img").src = siteContent.nav["img-src"];
 
 //cta - section
