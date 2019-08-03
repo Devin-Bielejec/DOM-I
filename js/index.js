@@ -105,3 +105,11 @@ for (let i = 0; i < contacts.length; i++){
 
 //footer
 document.querySelector("footer p").textContent = siteContent.footer.copyright;
+
+
+
+
+//updates to the page (let's try 5)
+document.querySelector("button").style.color = "blue";
+
+document.getElementsByTagName("p").style.color = "red";
