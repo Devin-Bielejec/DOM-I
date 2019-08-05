@@ -1,9 +1,17 @@
-//create a timer that counts up every 10ms
+function createButton(typeOfButton, styles){
+    const button = document.createElement("button");
+    button.classList.add(typeOfButton);
+    button.textContent = typeOfButton;
+    button.setAttribute("style", styles);
+    return button;
+}
 
-const tenMS = window.setInterval( count, 10);
-//every 10sm my cb function will run
+const startButton = createButton("start", "textTransform: capitalize; margin: 10px; padding: 10px; background: lightblue; color: green;");
 
-//every 10ms, i want to 
+const resetButton = createButton("reset", "textTransform: capitalize; margin: 10px; padding: 10px; background: red; color: black; font-weight: bold");
+
+document.querySelector(".buttons").appendChild(startButton);
+document.querySelector(".buttons").appendChild(resetButton);
 
 function count(){
     //setting variable to current value display on page
@@ -18,7 +26,6 @@ function count(){
     sO.textContent === "-" ? sO.textContent = 0 : false;
     sT.textContent === "-" ? sT.textContent = 0 : false;
 
-    console.log(msT.textContent, msH.textContent, sO.textContent, sT.textContent);
 
     if (Number(msT.textContent) < 9) {
         msT.textContent++;
@@ -38,4 +45,7 @@ function count(){
         clearInterval(tenMS);
         }
 } 
+
+startButton.addEventListener("click", (event) => window.setInterval( count, 10));
+
 
