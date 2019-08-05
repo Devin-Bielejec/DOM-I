@@ -25,7 +25,7 @@ Topics:
 
 ## Project Description
  You will be making a timer that:
-  * ![Increments every 10 ms][https://github.com/Devin-Bielejec/DOM-I/blob/Devin-Bielejec/img/Increments.JPG]
+  * ![Increments every 10 ms](https://github.com/Devin-Bielejec/DOM-I/blob/Devin-Bielejec/img/Increments.JPG)
 
   * Has digits change to red when it gets to 10 seconds
   * Counts up to 10 seconds
