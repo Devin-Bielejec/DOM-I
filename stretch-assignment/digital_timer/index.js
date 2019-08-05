@@ -18,7 +18,6 @@ function count(){
     sO === "-" ? sO = 0 : false;
     sT === "-" ? sT = 0 : false;
 
-    console.log(msT, msH, sO, sT);
     if (Number(msT) < 9) {
         msT++;
         document.querySelector("#msTens").textContent = msT;
@@ -37,7 +36,8 @@ function count(){
         document.querySelector("#msTens").textContent = 0;
         document.querySelector("#secondOnes").textContent = 0;
         console.log("hi");
-        document.querySelectorAll(".digit").forEach(item => item.classList.add(".redDigit"));
+        document.querySelectorAll(".digit").forEach(item => item.classList.add("redDigit"))
+        console.log(document.querySelectorAll(".digit"));
         clearInterval(tenMS);
         }
 } 
