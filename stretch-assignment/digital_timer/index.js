@@ -42,7 +42,7 @@ function count(){
         msT.textContent = 0;
         sO.textContent = 0;
         document.querySelector(".digits").classList.add("redDigit");
-        clearInterval(tenMS);
+        window.clearInterval();
         }
 } 
 
@@ -51,5 +51,16 @@ startButton.addEventListener("click", (event) => {
     startButton.disabled = true;
     console.log(startButton.textContent);
 });
+
+resetButton.addEventListener("click", event => {
+    document.querySelector("#msTens").textContent = "-";
+    document.querySelector("#msHundreds").textContent = "-";
+    document.querySelector("#secondOnes").textContent = "-";
+    document.querySelector("#secondTens").textContent = "-";
+    document.querySelector(".digits").classList.remove('redDigit');
+    startButton.disabled = false;
+    window.clearInterval();
+}
+)
 
 
