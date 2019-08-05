@@ -7,37 +7,34 @@ const tenMS = window.setInterval( count, 10);
 
 function count(){
     //setting variable to current value display on page
-    let msT = document.querySelector("#msTens").textContent;
-    let msH = document.querySelector("#msHundreds").textContent;
-    let sO = document.querySelector("#secondOnes").textContent;
-    let sT = document.querySelector("#secondTens").textContent;
+    let msT = document.querySelector("#msTens");
+    let msH = document.querySelector("#msHundreds");
+    let sO = document.querySelector("#secondOnes");
+    let sT = document.querySelector("#secondTens");
 
     //If it's "-", we're going to set it as 0
-    msT === "-" ? msT = 0 : false;
-    msH === "-" ? msH = 0 : false;
-    sO === "-" ? sO = 0 : false;
-    sT === "-" ? sT = 0 : false;
+    msT.textContent === "-" ? msT.textContent = 0 : false;
+    msH.textContent === "-" ? msH.textContent = 0 : false;
+    sO.textContent === "-" ? sO.textContent = 0 : false;
+    sT.textContent === "-" ? sT.textContent = 0 : false;
 
-    if (Number(msT) < 9) {
-        msT++;
-        document.querySelector("#msTens").textContent = msT;
-    } else if (Number(msH) < 9){
-        document.querySelector("#msTens").textContent = 0;
-        msH++;
-        document.querySelector("#msHundreds").textContent = msH;
-    } else if (Number(sO) < 9) {
-        document.querySelector("#msHundreds").textContent = 0;
-        document.querySelector("#msTens").textContent = 0;
-        sO++;
-        document.querySelector("#secondOnes").textContent = sO;
-    } else if (Number(sT) < 1) {
-        document.querySelector("#secondTens").textContent = 1;
-        document.querySelector("#msHundreds").textContent = 0;
-        document.querySelector("#msTens").textContent = 0;
-        document.querySelector("#secondOnes").textContent = 0;
-        console.log("hi");
+    console.log(msT.textContent, msH.textContent, sO.textContent, sT.textContent);
+
+    if (Number(msT.textContent) < 9) {
+        msT.textContent++;
+    } else if (Number(msH.textContent) < 9){
+        msT.textContent = 0;
+        msH.textContent++;
+    } else if (Number(sO.textContent) < 9) {
+        msH.textContent = 0;
+        msT.textContent = 0;
+        sO.textContent++;
+    } else if (Number(sT.textContent) < 1) {
+        sT.textContent = 1;
+        msH.textContent = 0;
+        msT.textContent = 0;
+        sO.textContent = 0;
         document.querySelectorAll(".digit").forEach(item => item.classList.add("redDigit"))
-        console.log(document.querySelectorAll(".digit"));
         clearInterval(tenMS);
         }
 } 
