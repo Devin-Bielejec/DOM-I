@@ -118,3 +118,12 @@ document.querySelector("button").style.color = "blue";
 document.querySelectorAll("p").forEach(item => item.style.fontFamily = "cursive");
 
 document.querySelectorAll("h4").forEach(item => item.textContent != "Contact" ? item.style.fontSize = "2rem" : false);
+
+
+
+//button that changes something - let's make a button that does something
+const getStartedButton = document.querySelector("button");
+getStartedButton.addEventListener("click", (event) => {
+  console.log(event);
+  document.querySelectorAll("nav a").forEach(item => item.style.fontFamily = "cursive");
+})
