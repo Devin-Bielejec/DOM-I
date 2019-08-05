@@ -1,3 +1,6 @@
+let timerStart = window.setInterval( count, 10);
+window.clearInterval(timerStart);
+
 function createButton(typeOfButton, styles){
     const button = document.createElement("button");
     button.classList.add(typeOfButton);
@@ -42,12 +45,12 @@ function count(){
         msT.textContent = 0;
         sO.textContent = 0;
         document.querySelector(".digits").classList.add("redDigit");
-        window.clearInterval();
+        window.clearInterval(timerStart);
         }
 } 
 
 startButton.addEventListener("click", (event) => {
-    window.setInterval( count, 10);
+    timerStart = window.setInterval( count, 10);
     startButton.disabled = true;
     console.log(startButton.textContent);
 });
@@ -59,7 +62,7 @@ resetButton.addEventListener("click", event => {
     document.querySelector("#secondTens").textContent = "-";
     document.querySelector(".digits").classList.remove('redDigit');
     startButton.disabled = false;
-    window.clearInterval();
+    window.clearInterval(timerStart);
 }
 )
 
