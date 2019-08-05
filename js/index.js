@@ -105,12 +105,8 @@ for (let i = 0; i < contacts.length; i++){
 
 //adding line break for contact - I could do it via breaking up the string?
 
-
 //footer
 document.querySelector("footer p").textContent = siteContent.footer.copyright;
-
-
-
 
 //updates to the page (let's try 5)
 document.querySelector("button").style.color = "blue";
@@ -118,8 +114,6 @@ document.querySelector("button").style.color = "blue";
 document.querySelectorAll("p").forEach(item => item.style.fontFamily = "cursive");
 
 document.querySelectorAll("h4").forEach(item => item.textContent != "Contact" ? item.style.fontSize = "2rem" : false);
-
-
 
 //button that changes something - let's make a button that does something
 const getStartedButton = document.querySelector("button");
