@@ -56,10 +56,10 @@ startButton.addEventListener("click", (event) => {
 });
 
 resetButton.addEventListener("click", event => {
-    document.querySelector("#msTens").textContent = "-";
-    document.querySelector("#msHundreds").textContent = "-";
-    document.querySelector("#secondOnes").textContent = "-";
-    document.querySelector("#secondTens").textContent = "-";
+    document.querySelector("#msTens").textContent = "0";
+    document.querySelector("#msHundreds").textContent = "0";
+    document.querySelector("#secondOnes").textContent = "0";
+    document.querySelector("#secondTens").textContent = "0";
     document.querySelector(".digits").classList.remove('redDigit');
     startButton.disabled = false;
     window.clearInterval(timerStart);
