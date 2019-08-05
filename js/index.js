@@ -115,4 +115,6 @@ document.querySelector("footer p").textContent = siteContent.footer.copyright;
 //updates to the page (let's try 5)
 document.querySelector("button").style.color = "blue";
 
-document.getElementsByTagName("p").style.color = "red";
+document.querySelectorAll("p").forEach(item => item.style.fontFamily = "cursive");
+
+document.querySelectorAll("h4").forEach(item => item.textContent != "Contact" ? item.style.fontSize = "2rem" : false);
