@@ -34,7 +34,7 @@ function count(){
         msH.textContent = 0;
         msT.textContent = 0;
         sO.textContent = 0;
-        document.querySelectorAll(".digit").forEach(item => item.classList.add("redDigit"))
+        document.querySelector(".digits").classList.add("redDigit");
         clearInterval(tenMS);
         }
 } 
