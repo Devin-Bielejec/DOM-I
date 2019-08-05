@@ -103,6 +103,9 @@ for (let i = 0; i < contacts.length; i++){
   nodeContacts[i].textContent = siteContent.contact[contacts[i]];
 }
 
+//adding line break for contact - I could do it via breaking up the string?
+
+
 //footer
 document.querySelector("footer p").textContent = siteContent.footer.copyright;
 
