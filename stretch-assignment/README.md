@@ -27,9 +27,8 @@ Topics:
  You will be making a timer that:
   * ![Increments every 10 ms](https://github.com/Devin-Bielejec/DOM-I/blob/Devin-Bielejec/img/Increments.JPG)
 
-  * Has digits change to red when it gets to 10 seconds
-  * Counts up to 10 seconds
-  * Should not count past 10 seconds
+  * [Has digits change to red when it gets to 10 seconds](https://github.com/Devin-Bielejec/DOM-I/blob/Devin-Bielejec/img/changesDigitsToRed.JPG)
+  * [Counts up to 10 seconds and does not count past 10 seconds](https://github.com/Devin-Bielejec/DOM-I/blob/Devin-Bielejec/img/countsToTen.JPG)
 
  You will also need to look up and use `window.setInterval`. For this method, and any of those listed in the "Topics" section of this README, you are encouraged to use MDN as your resource for Documentation. MDN can be challenging to consume at first, so you may also use something like W3schools if the MDN documentation on a given subject is a bit too complicated.
 
