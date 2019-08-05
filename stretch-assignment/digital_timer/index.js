@@ -46,6 +46,10 @@ function count(){
         }
 } 
 
-startButton.addEventListener("click", (event) => window.setInterval( count, 10));
+startButton.addEventListener("click", (event) => {
+    window.setInterval( count, 10);
+    startButton.disabled = true;
+    console.log(startButton.textContent);
+});
 
 
