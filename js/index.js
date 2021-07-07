@@ -37,6 +37,87 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+//nav - loop time
+for (let i = 0; i < Object.keys(siteContent.nav).length-1; i++){
+  let nav = document.querySelector(`nav a:nth-of-type(${i+1})`);
+  nav.text = `${siteContent.nav[`nav-item-${i+1}`]}`;
+  nav.style.color = "green";
+}
+
+//adding two new nav links
+let newNav = document.createElement("a");
+newNav.textContent = "China";
+
+let newNav2 = document.createElement("a");
+newNav2.textContent = "Portugal";
+
+document.querySelector('nav').appendChild(newNav);
+document.querySelector('nav').prepend(newNav2);
+
+document.querySelector("#logo-img").src = siteContent.nav["img-src"];
+
+//cta - section
+
+document.querySelector('h1').textContent = siteContent.cta.h1;
+
+document.querySelector(".cta button").textContent = siteContent.cta.button;
+
+document.querySelector(".cta img").src = siteContent.cta["img-src"];
+
+//main content - h4
+mcH4 = document.querySelectorAll(".main-content h4");
+
+mcH4[0].textContent = siteContent["main-content"]["features-h4"];
+
+mcH4[1].textContent = siteContent["main-content"]["about-h4"];
+
+mcH4[2].textContent = siteContent["main-content"]["services-h4"];
+
+mcH4[3].textContent = siteContent["main-content"]["product-h4"];
+
+mcH4[4].textContent = siteContent["main-content"]["vision-h4"];
+
+//main content - p
+mcH4 = document.querySelectorAll(".main-content p");
+
+mcH4[0].textContent = siteContent["main-content"]["features-content"];
+
+mcH4[1].textContent = siteContent["main-content"]["about-content"];
+
+mcH4[2].textContent = siteContent["main-content"]["services-content"];
+
+mcH4[3].textContent = siteContent["main-content"]["product-content"];
+
+mcH4[4].textContent = siteContent["main-content"]["vision-content"];
+
+//main content - img
+document.querySelector(".middle-img").src = siteContent["main-content"]["middle-img-src"];
+
+//contact
+contacts = Object.keys(siteContent.contact);
+
+let nodeContacts = document.querySelectorAll(".contact *");
+console.log(nodeContacts);
+console.log(nodeContacts[3]);
+for (let i = 0; i < contacts.length; i++){
+  nodeContacts[i].textContent = siteContent.contact[contacts[i]];
+}
+
+//adding line break for contact - I could do it via breaking up the string?
+
+//footer
+document.querySelector("footer p").textContent = siteContent.footer.copyright;
+
+//updates to the page (let's try 5)
+document.querySelector("button").style.color = "blue";
+
+document.querySelectorAll("p").forEach(item => item.style.fontFamily = "cursive");
+
+document.querySelectorAll("h4").forEach(item => item.textContent != "Contact" ? item.style.fontSize = "2rem" : false);
+
+//button that changes something - let's make a button that does something
+const getStartedButton = document.querySelector("button");
+getStartedButton.addEventListener("click", (event) => {
+  console.log(event);
+  document.querySelectorAll("nav a").forEach(item => item.style.fontFamily = "cursive");
+})
